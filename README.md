@@ -1,6 +1,6 @@
 # GH Travis [![NPM version](https://badge.fury.io/js/gh-travis.png)](http://badge.fury.io/js/gh-travis) [![Dependency Status](https://david-dm.org/node-gh/gh-travis.png)](https://david-dm.org/node-gh/gh-travis)
 
-![Droidtocat](http://zno.io/RN2k/droidtocat.png)
+![Droidtocat](http://zno.io/RMCK/droidtocat.png)
 
 NodeGH plugin for integrating [Travis](https://travis-ci.org/), a continous integration server.
 
