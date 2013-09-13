@@ -2,7 +2,7 @@
 
 ![Droidtocat](http://zno.io/RN2k/droidtocat.png)
 
-NodeGH plugin for Travis integration.
+NodeGH plugin for integrating [Travis](https://travis-ci.org/), a continous integration server.
 
 > Maintained by [Henrique Vicente](https://github.com/henvic).
 
