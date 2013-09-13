@@ -4,7 +4,7 @@
 
 NodeGH plugin for Travis integration.
 
-> Maintained by [Your Name](https://github.com/yourname).
+> Maintained by [Henrique Vicente](https://github.com/henvic).
 
 ## Install
 
