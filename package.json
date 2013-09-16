@@ -1,29 +1,33 @@
 {
-    "name": "gh-boilerplate",
-    "description": "NodeGH plugin for demonstrating how to create NodeGH plugins",
+    "name": "gh-travis",
+    "description": "NodeGH Travis plugin",
     "version": "0.1.0",
     "author": {
-        "name": "Author",
-        "email": "email@email.com",
-        "web": "http://www.nodegh.io"
+        "name": "Henrique Vicente",
+        "email": "henriquevicente@gmail.com",
+        "web": "http://henvic.github.io/"
     },
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git@github.com:node-gh/gh-boilerplate.git"
+        "url": "git@github.com:node-gh/gh-travis.git"
     },
     "bugs": {
-        "url": "https://github.com/node-gh/gh-boilerplate/issues"
+        "url": "https://github.com/node-gh/gh-travis/issues"
     },
     "keywords": [
-        "gh", "nodegh", "boilerplate", "plugin"
+        "gh", "nodegh", "travis", "ci", "plugin"
     ],
     "bin": {
-        "gh-bo": "bin/boilerplate.js",
-        "gh-boilerplate": "bin/boilerplate.js"
+        "gh-tr": "bin/gh-travis.js",
+        "gh-travis": "bin/gh-travis.js"
     },
     "engines": {
         "node": ">=0.8"
+    },
+    "dependencies": {
+        "open": ">=0.0.4",
+        "travis-ci": ">=1.0.1"
     },
     "peerDependencies": {
         "gh": ">=1.4.0"
