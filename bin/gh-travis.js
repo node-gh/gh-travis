@@ -10,40 +10,41 @@
 var GH_PATH = process.env.GH_PATH;
 
 // -- Requires -----------------------------------------------------------------
-var logger = require(GH_PATH + 'lib/logger');
+var logger = require(GH_PATH + 'lib/logger'),
+    open = require('open');
 
 // -- Constructor --------------------------------------------------------------
-function Boilerplate(options) {
+function Travis(options) {
     this.options = options;
 }
 
 // -- Constants ----------------------------------------------------------------
-Boilerplate.DETAILS = {
-    alias: 'bo',
-    description: 'Plugin example. Copy to start a new plugin.',
+Travis.DETAILS = {
+    alias: 'tr',
+    description: 'Travis Plugin for Node-GH.',
     options: {
-        'foo': Boolean
+        'browser': Boolean
     },
     shorthands: {
-        'f': [ '--foo' ]
+        'B': [ '--browser' ]
     },
     payload: function(payload, options) {
-        options.foo = true;
+        options.browser = true;
     }
 };
 
 // -- Commands -----------------------------------------------------------------
-Boilerplate.prototype.run = function() {
+Travis.prototype.run = function() {
     var instance = this,
         options = instance.options;
 
-    if (options.foo) {
-        instance.foo();
+    if (options.browser) {
+        instance.browser(options.user, options.repo);
     }
 };
 
-Boilerplate.prototype.foo = function() {
-    logger.log('NodeGH plugin boilerplate :)');
+Travis.prototype.browser = function(user, repo) {
+    open('https://travis-ci.org/' + user + '/' + repo);
 };
 
-exports.Impl = Boilerplate;
+exports.Impl = Travis;
