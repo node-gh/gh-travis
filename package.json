@@ -25,9 +25,16 @@
     "engines": {
         "node": ">=0.8"
     },
+    "scripts": {
+        "lint": "node_modules/.bin/jshint bin/ lib/ test/"
+    },
     "dependencies": {
         "open": ">=0.0.4",
         "travis-ci": ">=1.0.1"
+    },
+    "devDependencies": {
+        "jshint": ">=2.1.2",
+        "mocha": ">=1.12.0"
     },
     "peerDependencies": {
         "gh": ">=1.4.0"
