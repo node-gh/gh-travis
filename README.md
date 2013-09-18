@@ -9,33 +9,26 @@ NodeGH plugin for integrating [Travis](https://travis-ci.org/), a continous inte
 ## Install
 
 ```
-[sudo] npm install -g gh-boilerplate
+[sudo] npm install -g gh-travis
 ```
 
 ## Usage
 
 ```
-gh boilerplate
+gh travis
 ```
 
-> **Alias:** `gh bo`
+> **Alias:** `gh tr`
 
-Option             | Usage        | Type
----                | ---          | ---
-`-f`, `--foo`      | **Required** | `String`
 
 #### Examples
 
-* **Shortcut** for showing hello world message.
 
 	```
-gh bo
 	```
 
-* Show hello world message.
 
 	```
-gh bo --foo
 	```
 
 ## Contributing
