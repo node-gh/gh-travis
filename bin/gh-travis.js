@@ -41,7 +41,7 @@ Travis.DETAILS = {
         'r': [ '--repo' ]
     },
     payload: function(payload, options) {
-        options.browser = true;
+        options.builds = true;
     }
 };
 
