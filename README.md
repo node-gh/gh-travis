@@ -1,4 +1,4 @@
-# GH Travis [![NPM version](https://badge.fury.io/js/gh-travis.png)](http://badge.fury.io/js/gh-travis) [![Dependency Status](https://david-dm.org/node-gh/gh-travis.png)](https://david-dm.org/node-gh/gh-travis)
+# GH Travis [![Build Status](https://secure.travis-ci.org/node-gh/gh-travis.png?branch=master)](https://travis-ci.org/node-gh/gh-travis) [![NPM version](https://badge.fury.io/js/gh-travis.png)](http://badge.fury.io/js/gh-travis) [![Dependency Status](https://david-dm.org/node-gh/gh-travis.png)](https://david-dm.org/node-gh/gh-travis)
 
 ![Droidtocat](http://zno.io/RMCK/droidtocat.png)
 
@@ -30,6 +30,22 @@ gh travis
 
 	```
 	```
+
+## Testing
+
+Check [Travis](https://travis-ci.org/node-gh/gh-travis) for continous integration results.
+
+* Run [JSHint](http://www.jshint.com/), a tool to detect errors and potential problems.
+
+    ```
+npm run-script lint
+    ```
+
+* Run [Mocha](http://visionmedia.github.io/mocha/), a unit test framework.
+
+    ```
+npm run-script test
+    ```
 
 ## Contributing
 

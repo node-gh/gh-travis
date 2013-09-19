@@ -5,13 +5,23 @@
     "author": {
         "name": "Henrique Vicente",
         "email": "henriquevicente@gmail.com",
-        "web": "http://henvic.github.io/"
+        "web": "http://henvic.github.io/",
+        "twitter": "henriquev"
     },
-    "contributors": [{
-        "name": "Zeno Rocha",
-        "email": "zno.rocha@gmail.com",
-        "web": "http://zenorocha.com"
-    }],
+    "contributors": [
+        {
+            "name": "Eduardo Lundgren",
+            "email": "eduardolundgren@gmail.com",
+            "web": "http://www.eduardo.io",
+            "twitter": "eduardolundgren"
+        },
+        {
+            "name": "Zeno Rocha",
+            "email": "zno.rocha@gmail.com",
+            "web": "http://zenorocha.com",
+            "twitter": "zenorocha"
+        }
+    ],
     "license": "BSD",
     "repository": {
         "type": "git",
@@ -27,11 +37,9 @@
         "gh-tr": "bin/gh-travis.js",
         "gh-travis": "bin/gh-travis.js"
     },
-    "engines": {
-        "node": ">=0.8"
-    },
     "scripts": {
-        "lint": "node_modules/.bin/jshint bin/"
+        "lint": "node_modules/.bin/jshint bin/ test/",
+        "test": "node_modules/.bin/mocha --reporter list"
     },
     "dependencies": {
         "open": ">=0.0.4",
@@ -43,6 +51,9 @@
     },
     "peerDependencies": {
         "gh": ">=1.4.0"
+    },
+    "engines": {
+        "node": ">=0.8"
     },
     "preferGlobal": "true"
 }
