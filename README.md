@@ -98,6 +98,8 @@ npm run-script test
 
 ## History
 
+* v0.2.1 September 19, 2013
+    * Fix executable on Windows
 * v0.2.0 September 19, 2013
     * Improve log
     * Rename `--builds` to `--list`
