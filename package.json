@@ -7,6 +7,11 @@
         "email": "henriquevicente@gmail.com",
         "web": "http://henvic.github.io/"
     },
+    "contributors": [{
+        "name": "Zeno Rocha",
+        "email": "zno.rocha@gmail.com",
+        "web": "http://zenorocha.com"
+    }],
     "license": "BSD",
     "repository": {
         "type": "git",
