@@ -24,7 +24,7 @@ function Travis(options) {
 // -- Constants ----------------------------------------------------------------
 Travis.DETAILS = {
     alias: 'tr',
-    description: 'Travis Plugin for Node-GH.',
+    description: 'NodeGH plugin for integrating Travis, a continous integration server',
     options: {
         'all': Boolean,
         'browser': Boolean,
