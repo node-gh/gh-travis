@@ -24,6 +24,10 @@ function Travis(options) {
 // -- Constants ----------------------------------------------------------------
 Travis.DETAILS = {
     alias: 'tr',
+    commands: [
+        'browser',
+        'list'
+    ],
     description: 'NodeGH plugin for integrating Travis, a continous integration server',
     options: {
         'all': Boolean,
