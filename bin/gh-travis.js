@@ -28,21 +28,21 @@ Travis.DETAILS = {
     options: {
         'all': Boolean,
         'browser': Boolean,
-        'builds': Boolean,
-        'detailed' : Boolean,
+        'detailed': Boolean,
+        'list': Boolean,
         'user': String,
         'repo': String
     },
     shorthands: {
         'a': [ '--all' ],
         'B': [ '--browser' ],
-        'b': [ '--builds' ],
         'd': [ '--detailed' ],
+        'l': [ '--list' ],
         'u': [ '--user' ],
         'r': [ '--repo' ]
     },
     payload: function(payload, options) {
-        options.builds = true;
+        options.list = true;
     }
 };
 
@@ -55,7 +55,7 @@ Travis.prototype.run = function() {
         instance.browser(options.user, options.repo);
     }
 
-    if (options.builds) {
+    if (options.list) {
         if (!options.repo) {
             options.all = true;
         }
@@ -67,7 +67,7 @@ Travis.prototype.run = function() {
             repo: options.repo
         });
 
-        instance.builds(options.user, options.repo);
+        instance.list(options.user, options.repo);
     }
 };
 
@@ -75,7 +75,7 @@ Travis.prototype.browser = function(user, repo) {
     openUrl('https://travis-ci.org/' + user + '/' + repo);
 };
 
-Travis.prototype.builds = function(user, repo) {
+Travis.prototype.list = function(user, repo) {
     var instance = this,
         options = instance.options,
         payload = {};
