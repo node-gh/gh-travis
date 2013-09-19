@@ -20,16 +20,57 @@ gh travis
 
 > **Alias:** `gh tr`
 
+### 1. List
+
+Option            | Usage        | Type
+---               | ---          | ---
+`-l`, `--list`    | **Required** | `Boolean`
+`-a`, `--all`     | *Optional*   | `Boolean`
+`-d`, `--detailed`| *Optional*   | `Boolean`
+`-r`, `--repo`    | *Optional*   | `String`
+`-u`, `--user`    | *Optional*   | `String`
 
 #### Examples
 
+* **Shortcut** for listing build status for current repo.
 
-	```
-	```
+    ```
+gh tr
+    ```
 
+* List build status for all repos.
 
-	```
-	```
+    ```
+gh tr --list --all
+    ```
+
+* List build status with link.
+
+    ```
+gh pr --list --detailed
+    ```
+
+### 2. Open in Browser
+
+Option                 | Usage        | Type
+---                    | ---          | ---
+`-B`, `--browser`      | **Required** | `Boolean`
+`-r`, `--repo`         | *Optional*   | `String`
+`-u`, `--user`         | *Optional*   | `String`
+
+#### Examples
+
+* Opening Travis page in the browser for current repo.
+
+    ```
+gh tr --browser
+    ```
+
+* Open Travis page in the browser for a certain repo.
+
+    ```
+gh tr --browser -user node-gh --repo gh-travis
+    ```
 
 ## Testing
 
