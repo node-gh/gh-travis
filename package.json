@@ -31,7 +31,7 @@
         "node": ">=0.8"
     },
     "scripts": {
-        "lint": "node_modules/.bin/jshint bin/ lib/ test/"
+        "lint": "node_modules/.bin/jshint bin/"
     },
     "dependencies": {
         "open": ">=0.0.4",

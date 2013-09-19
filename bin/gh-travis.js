@@ -12,7 +12,7 @@ var GH_PATH = process.env.GH_PATH;
 
 // -- Requires -----------------------------------------------------------------
 var logger = require(GH_PATH + 'lib/logger'),
-    open = require('open'),
+    openUrl = require('open'),
     TravisCi = require('travis-ci'),
     travisCi = new TravisCi({version: '2.0.0'});
 
@@ -72,7 +72,7 @@ Travis.prototype.run = function() {
 };
 
 Travis.prototype.browser = function(user, repo) {
-    open('https://travis-ci.org/' + user + '/' + repo);
+    openUrl('https://travis-ci.org/' + user + '/' + repo);
 };
 
 Travis.prototype.builds = function(user, repo) {
