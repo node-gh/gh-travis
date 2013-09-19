@@ -64,7 +64,7 @@ Travis.prototype.run = function() {
             options.all = true;
         }
 
-        logger.logTemplate('{{prefix}} [info] Listing builds for {{greenBright user}}' +
+        logger.logTemplate('{{prefix}} [info] Listing last builds for {{greenBright user}}' +
             '{{#if notAll}}{{greenBright "/" repo}}{{/if}}', {
             notAll: !options.all,
             user: options.user,
@@ -89,6 +89,25 @@ Travis.prototype.list = function(user, repo) {
     if (!options.all) {
         payload.name = repo;
     }
+
+    logger.registerHelper('state', function(state) {
+        var color = logger.clc.magentaBright;
+
+        if (state === 'passed') {
+            color = logger.clc.greenBright;
+        }
+        else if (state === 'started') {
+            color = logger.clc.blueBright;
+        }
+        else if (state === 'failed') {
+            color = logger.clc.redBright;
+        }
+        else if (state === 'errored') {
+            color = logger.clc.redBright;
+        }
+
+        return color(state);
+    });
 
     travisCi.repos(payload, function (err, builds) {
         instance.buildsCallback_(err, builds);
