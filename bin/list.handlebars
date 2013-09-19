@@ -1,0 +1,9 @@
+{{#each repos}}{{../prefix}} {{{yellowBright "➜ " slug}}}
+{{../prefix}}     {{#if last_build_id}}{{{greenBright "#" last_build_id}}} {{{last_build_state}}}{{else}} There are no builds for this repository.{{/if}}
+{{#if last_build_started_at}} ({{date last_build_started_at}}){{/if}}
+{{#if ../detailed}}
+{{../../prefix}}     {{{blueBright "https://travis-ci.org/" slug "/builds/" id}}}
+{{/if}}
+{{../prefix}}
+
+{{/each}}

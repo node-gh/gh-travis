@@ -115,16 +115,7 @@ Travis.prototype.buildsCallback_ = function(err, builds) {
     }
 
     if (repos.length > 0) {
-        logger.logTemplate('{{#each repos}}' +
-            '{{../prefix}} {{{yellowBright "➜ " slug}}}\n' +
-            '{{../prefix}}' +
-            '     {{#if last_build_id}}{{{greenBright "#" last_build_id}}} {{{last_build_state}}}{{else}} There are no builds for this repository.{{/if}}' +
-            '{{#if last_build_started_at}} ({{date last_build_started_at}}){{/if}}\n' +
-            '{{#if ../detailed}}' +
-            '{{../../prefix}}     {{{blueBright "https://travis-ci.org/" slug "/builds/" id}}}\n' +
-            '{{/if}}' +
-            '{{/each}}' +
-            '{{prefix}}', {
+        logger.logTemplateFile(__dirname + '/list.handlebars', {
             detailed: options.detailed,
             repos: repos
         });
