@@ -98,6 +98,12 @@ npm run-script test
 
 ## History
 
+* v0.2.0 September 19, 2013
+    * Improve log
+    * Rename `--builds` to `--list`
+    * Add JSHint, Mocha and Travis
+* v0.1.0 September 18, 2013
+    * Add `--builds` and `--browser` flags
 * v0.0.1 September 12, 2013
 	* Start plugin using [gh-boilerplate](https://github.com/node-gh/gh-boilerplate)
 

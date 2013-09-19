@@ -1,7 +1,7 @@
 {
     "name": "gh-travis",
-    "description": "NodeGH Travis plugin",
-    "version": "0.1.0",
+    "description": "NodeGH plugin for integrating Travis, a continous integration server.",
+    "version": "0.2.0",
     "author": {
         "name": "Henrique Vicente",
         "email": "henriquevicente@gmail.com",
