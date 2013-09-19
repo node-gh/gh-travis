@@ -106,6 +106,7 @@ Travis.prototype.buildsCallback_ = function(err, builds) {
         logger.error(err.file);
     }
 
+    // Normalize object for one or more repos
     if (builds && builds.repo) {
         repos = [builds.repo];
     }
@@ -117,13 +118,13 @@ Travis.prototype.buildsCallback_ = function(err, builds) {
         logger.logTemplate('{{#each repos}}' +
             '{{../prefix}} {{{yellowBright "➜ " slug}}}\n' +
             '{{../prefix}}' +
-            '     {{{greenBright "#" last_build_id}}} {{{last_build_state}}} ' +
+            '     {{#if last_build_id}}{{{greenBright "#" last_build_id}}} {{{last_build_state}}}{{else}} There are no builds for this repository.{{/if}}' +
             '{{#if last_build_started_at}} ({{date last_build_started_at}}){{/if}}\n' +
             '{{#if ../detailed}}' +
             '{{../../prefix}}     {{{blueBright "https://travis-ci.org/" slug "/builds/" id}}}\n' +
             '{{/if}}' +
-            '{{../prefix}}' +
-            '{{/each}}', {
+            '{{/each}}' +
+            '{{prefix}}', {
             detailed: options.detailed,
             repos: repos
         });
