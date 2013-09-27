@@ -98,7 +98,7 @@ npm run-script test
 
 ## History
 
-See [Release](https://github.com/node-gh/gh-travis/releases) list.
+Check [Release](https://github.com/node-gh/gh-travis/releases) list.
 
 ## License
 
