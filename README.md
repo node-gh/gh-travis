@@ -1,4 +1,4 @@
-# GH Travis [![Build Status](https://secure.travis-ci.org/node-gh/gh-travis.png?branch=master)](https://travis-ci.org/node-gh/gh-travis) [![NPM version](https://badge.fury.io/js/gh-travis.png)](http://badge.fury.io/js/gh-travis) [![Dependency Status](https://david-dm.org/node-gh/gh-travis.png)](https://david-dm.org/node-gh/gh-travis)
+# GH Travis [![Build Status](https://secure.travis-ci.org/node-gh/gh-travis.svg?branch=master)](https://travis-ci.org/node-gh/gh-travis) [![NPM version](https://badge.fury.io/js/gh-travis.svg)](http://badge.fury.io/js/gh-travis) [![Dependency Status](https://david-dm.org/node-gh/gh-travis.svg?theme=badge.io)](https://david-dm.org/node-gh/gh-travis)
 
 ![Droidtocat](http://zno.io/RMCK/droidtocat.png)
 
