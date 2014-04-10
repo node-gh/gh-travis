@@ -47,7 +47,7 @@ gh tr --list --all
 * List build status with link.
 
     ```
-gh pr --list --detailed
+gh tr --list --detailed
     ```
 
 ### 2. Open in Browser
