@@ -83,14 +83,7 @@ Travis.prototype.browser = function(user, repo) {
 
 Travis.prototype.list = function(user, repo) {
     var instance = this,
-        options = instance.options,
-        payload = {};
-
-    payload.owner_name = user;
-
-    if (!options.all) {
-        payload.name = repo;
-    }
+        options = instance.options;
 
     logger.registerHelper('state', function(state) {
         var color = logger.clc.magentaBright;
@@ -111,9 +104,16 @@ Travis.prototype.list = function(user, repo) {
         return color(state);
     });
 
-    travisCi.repos(payload, function (err, builds) {
-        instance.buildsCallback_(err, builds);
-    });
+    if (options.all) {
+            travisCi.repos(user).get(function (err, builds) {
+            instance.buildsCallback_(err, builds);
+        });
+    }
+    else {
+        travisCi.repos(user, repo).get(function (err, builds) {
+            instance.buildsCallback_(err, builds);
+        });
+    }
 };
 
 Travis.prototype.buildsCallback_ = function(err, builds) {
