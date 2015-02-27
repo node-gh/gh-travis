@@ -34,8 +34,8 @@
         "gh", "nodegh", "travis", "ci", "plugin"
     ],
     "bin": {
-        "gh-tr": "bin/gh-travis.js",
-        "gh-travis": "bin/gh-travis.js"
+        "gh-tr": "bin/travis.js",
+        "gh-travis": "bin/travis.js"
     },
     "scripts": {
         "lint": "node_modules/.bin/jshint bin/ test/",
