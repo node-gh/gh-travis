@@ -42,12 +42,12 @@
         "test": "node_modules/.bin/mocha --reporter list"
     },
     "dependencies": {
-        "open": ">=0.0.4",
-        "travis-ci": ">=1.2"
+        "open": ">=0.0.5",
+        "travis-ci": "^2.0.3"
     },
     "devDependencies": {
-        "jshint": ">=2.1.2",
-        "mocha": ">=1.12.0"
+        "jshint": "~2.6.0",
+        "mocha": "^2.1.0"
     },
     "peerDependencies": {
         "gh": ">=1.9"
