@@ -66,7 +66,7 @@ Travis.prototype.run = function() {
             options.all = true;
         }
 
-        logger.logTemplate('{{prefix}} [info] Listing last builds for {{greenBright user}}' +
+        logger.logTemplate('[info] Listing last builds for {{greenBright user}}' +
             '{{#if notAll}}{{greenBright "/" repo}}{{/if}}', {
             notAll: !options.all,
             user: options.user,

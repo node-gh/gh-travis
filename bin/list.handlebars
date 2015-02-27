@@ -1,9 +1,8 @@
-{{#each repos}}{{../prefix}} {{{yellowBright "➜ " slug}}}
-{{../prefix}}     {{#if ../detailed}}{{#if last_build_id}}#{{{last_build_id}}}{{/if}}{{/if}}{{#if last_build_state}} Last build {{{state last_build_state}}}{{else}} There are no builds for this repository.{{/if}}
+{{#each repos}}{{{yellowBright "➜ " slug}}}
+{{#if ../detailed}}{{#if last_build_id}}#{{{last_build_id}}}{{/if}}{{/if}}{{#if last_build_state}} Last build {{{state last_build_state}}}{{else}} There are no builds for this repository.{{/if}}
 {{#if ../detailed}}{{#if last_build_started_at}} ({{date last_build_started_at}}){{/if}}{{/if}}
 {{#if ../detailed}}
-{{../../prefix}}     {{#if last_build_id}}{{{blueBright "https://travis-ci.org/" slug "/builds/" last_build_id}}}{{/if}}
+{{#if last_build_id}}{{{blueBright "https://travis-ci.org/" slug "/builds/" last_build_id}}}{{/if}}
 {{/if}}
-{{../prefix}}
 
 {{/each}}
