@@ -49,9 +49,6 @@
         "jshint": "~2.6.0",
         "mocha": "^2.1.0"
     },
-    "peerDependencies": {
-        "gh": ">=1.11"
-    },
     "engines": {
         "node": ">=0.12"
     },
