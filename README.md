@@ -15,7 +15,7 @@ NodeGH plugin for integrating [Travis](https://travis-ci.org/), a continous inte
 ## Install
 
 ```
-[sudo] npm install -g gh-travis
+[sudo] npm install -g gh gh-travis
 ```
 
 ## Usage
