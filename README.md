@@ -1,6 +1,12 @@
-# GH Travis [![Build Status](https://secure.travis-ci.org/node-gh/gh-travis.png?branch=master)](https://travis-ci.org/node-gh/gh-travis) [![NPM version](https://badge.fury.io/js/gh-travis.png)](http://badge.fury.io/js/gh-travis) [![Dependency Status](https://david-dm.org/node-gh/gh-travis.png)](https://david-dm.org/node-gh/gh-travis)
+# GH Travis
 
-![Droidtocat](http://zno.io/RMCK/droidtocat.png)
+[![NPM version](http://img.shields.io/npm/v/gh-travis.svg?style=flat)](http://npmjs.org/gh-travis)
+[![NPM downloads](http://img.shields.io/npm/dm/gh-travis.svg?style=flat)](http://npmjs.org/gh-travis)
+[![Build Status](http://img.shields.io/travis/node-gh/gh-travis/master.svg?style=flat)](https://travis-ci.org/node-gh/gh-travis)
+[![Dependencies Status](http://img.shields.io/david/node-gh/gh-travis.svg?style=flat)](https://david-dm.org/node-gh/gh-travis)
+[![DevDependencies Status](http://img.shields.io/david/dev/node-gh/gh-travis.svg?style=flat)](https://david-dm.org/node-gh/gh-travis#info=devDependencies)
+
+![Droidtocat](https://cloud.githubusercontent.com/assets/398893/3528199/d2eb1f12-078c-11e4-9dad-8397d9f97aba.png)
 
 NodeGH plugin for integrating [Travis](https://travis-ci.org/), a continous integration server.
 
@@ -47,7 +53,7 @@ gh tr --list --all
 * List build status with link.
 
     ```
-gh pr --list --detailed
+gh tr --list --detailed
     ```
 
 ### 2. Open in Browser
