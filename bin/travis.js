@@ -10,6 +10,8 @@
  * @author Zeno Rocha <zno.rocha@gmail.com>
  */
 
+ 'use strict';
+
 var GH_PATH = process.env.GH_PATH;
 
 // -- Requires -----------------------------------------------------------------
@@ -66,13 +68,6 @@ Travis.prototype.run = function() {
             options.all = true;
         }
 
-        logger.logTemplate('Listing last builds for {{greenBright user}}' +
-            '{{#if notAll}}{{greenBright "/" repo}}{{/if}}', {
-            notAll: !options.all,
-            user: options.user,
-            repo: options.repo
-        });
-
         instance.list(options.user, options.repo);
     }
 };
@@ -83,26 +78,14 @@ Travis.prototype.browser = function(user, repo) {
 
 Travis.prototype.list = function(user, repo) {
     var instance = this,
-        options = instance.options;
+        options = instance.options,
+        header = 'Listing last builds for ' + logger.colors.green(user);
 
-    logger.registerHelper('state', function(state) {
-        var color = logger.clc.magentaBright;
+    if (!options.all) {
+        header += logger.colors.green('/' + repo);
+    }
 
-        if (state === 'passed') {
-            color = logger.clc.greenBright;
-        }
-        else if (state === 'started') {
-            color = logger.clc.blueBright;
-        }
-        else if (state === 'failed') {
-            color = logger.clc.redBright;
-        }
-        else if (state === 'errored') {
-            color = logger.clc.redBright;
-        }
-
-        return color(state);
-    });
+    logger.log(header);
 
     if (options.all) {
             travisCi.repos(user).get(function (err, builds) {
@@ -116,10 +99,25 @@ Travis.prototype.list = function(user, repo) {
     }
 };
 
+Travis.prototype.printRepo_ = function(repo) {
+    var options = this.options,
+        content = logger.colors.yellow(repo.slug) + '\n';
+
+    if (options.detailed) {
+        if (repo.last_build_id) {
+            content += 'Last build #' + repo.last_build_id + ' ' + repo.last_build_state + ' ' +
+                logger.getDuration(repo.last_build_started_at) + '\n'
+                logger.colors.blue('https://travis-ci.org/' + repo.slug + '/builds/' + repo.last_build_id);
+        } else {
+            content += 'There are no builds for this repository.\n';
+        }
+    }
+
+    logger.log(content);
+};
+
 Travis.prototype.buildsCallback_ = function(err, builds) {
-    var instance = this,
-        options = instance.options,
-        repos = [];
+    var repos = [];
 
     try {
         err = JSON.parse(err);
@@ -140,10 +138,7 @@ Travis.prototype.buildsCallback_ = function(err, builds) {
     }
 
     if (repos.length > 0) {
-        logger.logTemplateFile(__dirname + '/list.handlebars', {
-            detailed: options.detailed,
-            repos: repos
-        });
+        repos.forEach(this.printRepo_, this);
     }
 };
 
