@@ -6,8 +6,6 @@
 [![Dependencies Status](http://img.shields.io/david/node-gh/gh-travis.svg?style=flat)](https://david-dm.org/node-gh/gh-travis)
 [![DevDependencies Status](http://img.shields.io/david/dev/node-gh/gh-travis.svg?style=flat)](https://david-dm.org/node-gh/gh-travis#info=devDependencies)
 
-![Droidtocat](https://cloud.githubusercontent.com/assets/398893/3528199/d2eb1f12-078c-11e4-9dad-8397d9f97aba.png)
-
 NodeGH plugin for integrating [Travis](https://travis-ci.org/), a continous integration server.
 
 > Maintained by [Henrique Vicente](https://github.com/henvic).
